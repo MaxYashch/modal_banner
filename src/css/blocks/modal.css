@@ -1,0 +1,237 @@
+.modal, .modal__bg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal {
+    position: fixed;
+    /* background: var(--color-dark); */
+    background: red;
+    color: var(--color-light);
+}
+
+.modal__bg {
+    position: absolute;
+    object-fit: cover;
+}
+
+.modal__content {
+    position: relative;
+    height: 100%;
+    overflow: auto;
+    padding: calc(190px + env(safe-area-inset-top)) 24px calc(10px + env(safe-area-inset-bottom));
+}
+
+.modal__close {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    padding: calc(24px + env(safe-area-inset-top)) 24px 24px;
+    margin-bottom: 180px;
+    z-index: 2;
+}
+
+.modal__close-icon {
+    width: 12px;
+    height: 12px;
+    object-fit: contain;
+    display: block;
+}
+
+.modal__title {
+    line-height: 46px;
+    font-size: 42px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* ----------- features block ----------- */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 50px;
+}
+
+.feature {
+    position: relative;
+    padding-top: 132.759%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.feature__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.feature__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(4, 6, 26, 0), rgba(6, 9, 37, 0.56), rgba(21, 7, 47, 1));
+    z-index: 2;
+}
+
+.feature__title {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    line-height: 14px;
+    font-size: 12px;
+    z-index: 3;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ----------- form block ----------- */
+.modal__form,
+.select-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__form {
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.select-buttons {
+    gap: 8px;    
+}
+
+.select-button,
+.button {
+  border-radius: 30px;
+  outline: none;
+}
+
+.select-button {
+  background-color: #24232f;
+  position: relative;
+  display: block;
+  min-height: var(--modal-button-height);
+}
+
+.select-button__input {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+}
+
+.select-button__button {
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 30px;
+}
+
+.select-button__input:checked ~ .select-button__button {
+    background-color: #55535f;
+    box-shadow: 0 0 0 1px var(--color-light) inset;
+}
+
+.select-button__badge {
+    position: absolute;
+    top: -20%;
+    right: 4%;
+    background: var(--color-light);
+    padding: 2px 20px;
+    color: #141131;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 10px;
+}
+
+.select-button__main,
+.select-button__aside {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 4px;
+}
+
+.select-button__main {
+    flex: 1 1 60%;
+}
+
+.select-button__aside {
+    flex: 1 1 30%;
+}
+
+.select-button__title {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: var(--color-light);
+    display: block;
+}
+
+.select-button__description,
+.select-button__price {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #cccbcf;
+    display: block;
+}
+
+.button {
+    height: var(--modal-button-height);
+    background: var(--color-light);
+    font-weight: 600;
+    line-height: 24px;
+    font-size: 20px;
+    color: #070b33;
+}
+
+/* ----------- footer block ----------- */
+.modal__footer-list {
+    display: flex;
+    justify-content: center;
+    gap: 2px 24px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.modal__footer-link {
+    font-size: 12px;
+    line-height: 16px;
+    color: #838486;
+}
+
+/* ----------- media block ----------- */
+@media (max-width: 375px) {
+    .modal__close {
+        margin-bottom: 80px;    
+    }
+
+    .modal__form {
+        margin-bottom: 24px;
+    }
+
+    .modal__footer {
+        padding-inline: 30px;
+    }
+}

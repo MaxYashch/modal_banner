@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>Mobile banner</title>
+  </head>
+  <body>
+    <div data-modal class="modal">
+      <img 
+        class="modal__bg" 
+        src="/assets/bg.jpg" 
+        srcset="/assets/bg.jpg, /assets/bg-2x.jpg 2x, /assets/bg-3x.jpg 3x" 
+        alt=""
+      >
+      <div class="modal__content">
+        <button class="modal__close" type="button">
+          <img
+            src="/assets/Cross-svg.svg" 
+            alt="" 
+            class="modal__close-icon"
+          >
+        </button>
+        <h1 class="modal__title" data-i18n="get_access">Get Unlimited Access</h1>
+        <div class="modal__features features">
+          <div class="features__item feature">
+            <img 
+              class="feature__image" 
+              src="/assets/feature-1-x1.jpg" 
+              srcset="/assets/feature-1-x1.jpg, /assets/feature-1-x2.jpg 2x, /assets/feature-1-x3.jpg 3x" 
+              alt=""
+            >
+            <div class="feature__overlay"></div>
+            <div class="feature__title" data-i18n="unlimited_art_creation">Unlimited Art Creation</div>
+          </div>
+          <div class="features__item feature">
+            <img 
+              class="feature__image" 
+              src="/assets/feature-2-x1.jpg" 
+              srcset="/assets/feature-2-x1.jpg, /assets/feature-2-x2.jpg 2x, /assets/feature-2-x3.jpg 3x" 
+              alt=""
+            >
+            <div class="feature__overlay"></div>
+            <div class="feature__title" data-i18n="exclusive_styles">Exclusive Styles</div>
+          </div>
+          <div class="features__item feature">
+            <img 
+              class="feature__image" 
+              src="/assets/feature-1-x1.jpg" 
+              srcset="/assets/feature-1-x1.jpg, /assets/feature-1-x2.jpg 2x, /assets/feature-1-x3.jpg 3x" 
+              alt=""
+            >
+            <div class="feature__overlay"></div>
+            <div class="feature__title" data-i18n="magic_avatars">Magic Avatars With 20% Off</div>
+          </div>
+        </div>
+        <form class="modal__form" action="">
+          <div class="select-buttons">
+            <label class="select-button select-buttons__item">
+              <input 
+                class="select-button__input"
+                type="radio" 
+                name="website" 
+                value="https://apple.com/" 
+              >
+              <span class="select-button__button">
+                <span class="select-button__badge" data-i18n="best_offer">BEST OFFER</span>
+                <span class="select-button__main">
+                  <span class="select-button__title" data-i18n="yearly_access">YEARLY ACCESS</span>
+                  <span class="select-button__description" data-i18n="price_per_year">Just $39.99 per year</span>
+                </span>
+                <span class="select-button__aside">
+                  <span class="select-button__price" data-i18n="price_per_week">$0.48 <br>per week</span>
+                </span>
+              </span>
+            </label>
+            <label class="select-button select-buttons__item">
+              <input 
+                class="select-button__input" 
+                type="radio" 
+                name="website" 
+                value="https://google.com/"
+              >
+                <span class="select-button__button">
+                  <span class="select-button__main">
+                    <span class="select-button__title" data-i18n="weekly_access">WEEKLY ACCESS</span>
+                  </span>
+                  <span class="select-button__aside">
+                    <span class="select-button__price" data-i18n="price_per_week">$6.99 <br>per week</span>
+                  </span>
+                </span>
+            </label>
+          </div>
+          <button 
+            class="button" 
+            type="submit" 
+            data-i18n="continue">
+              Continue
+            </button>
+        </form>
+        <footer class="modal__footer">
+          <ul class="modal__footer-list">
+            <li>
+              <a href="/#" 
+                  class="modal__footer-link"  
+                  data-i18n="terms_of_use"
+                >
+                Terms of Use
+              </a>
+            </li>
+            <li>
+              <a href="/#" 
+                class="modal__footer-link"
+                data-i18n="privacy_policy"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="/#" 
+                class="modal__footer-link"
+                data-i18n="restore"
+              >
+                Restore
+              </a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+    <script defer type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+:root {
+    --color-dark: #000;
+    --color-light: #FFFFFF;
+    
+    --font-family-base: 'SF-Pro', sans-serif;
+    
+    --transition-duration: 0.2s;
+
+    --modal-button-height: 56px;
+  }
